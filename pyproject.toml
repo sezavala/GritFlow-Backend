@@ -1,0 +1,21 @@
+[project]
+name = "grit-flow"
+version = "0.0.1"
+requires-python = ">=3.11"
+# Dependencies our application needs to run in production
+dependencies = [
+    "fastapi[standard]",
+    "uvicorn[standard]",
+    "pydantic-settings",
+    "starlette",
+    "urllib3",
+    "http"
+]
+# Dependencies our application needs for development
+[dependency-groups]
+dev = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic-settings",
+    "httpx"
+]
